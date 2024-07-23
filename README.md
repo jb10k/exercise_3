@@ -6,7 +6,7 @@
 ``` bash
 git clone https://github.com/jb10k/exercise_3.git
 ```
-Установить docker на клиент машину с помощью playbook
+Установить docker на клиент-машину с помощью playbook
 ``` bash
 install_docker.yaml
 ```
