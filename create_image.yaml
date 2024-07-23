@@ -1,0 +1,10 @@
+---
+- name: Create image
+  hosts: build
+  tasks:
+  - name: build image
+    docker_image:
+      name: app
+      source: build
+      build:
+        path: /home/aldar/docker-pg

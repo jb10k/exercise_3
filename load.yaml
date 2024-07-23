@@ -1,0 +1,23 @@
+---
+- name: load
+  hosts: client
+  become: true
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: copy arhive to client
+      copy:
+        src: ./app.tar
+        dest: /root/app.tar
+    - name: load container
+      docker_image:
+        name: app
+        load_path: /root/app.tar
+        state: present
+        source: load
+    - name: run container
+      docker_container:
+        name: front-end-bd
+        image: app
+        state: started
+        restart: yes
