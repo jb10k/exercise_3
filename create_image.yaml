@@ -7,4 +7,4 @@
       name: app
       source: build
       build:
-        path: ./
+        path: .
