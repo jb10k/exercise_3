@@ -6,11 +6,11 @@
     - name: archive
       docker_image:
         name: app
-        archive_path: /home/aldar/app.tar
+        archive_path: /root/app.tar
         source: pull
         state: present
     - name: fetch archive
       fetch:
-        src: /home/aldar/app.tar
+        src: /root/app.tar
         dest: ./app.tar
         flat: true   
