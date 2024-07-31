@@ -1,0 +1,14 @@
+name: my first actiton
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: print msg
+      run: echo "Hello World!"
